@@ -1,15 +1,11 @@
 export default function iterateThroughObject(reportWithIterator) {
-  let itemstr = ''; let
-    i = 0;
+  let newStr = '';
   for (const item of reportWithIterator) {
-    // eslint-disable-next-line eqeqeq
-    if (reportWithIterator.length - 1 == i) {
-      itemstr += item;
+    if (item === reportWithIterator[reportWithIterator.length - 1]) {
+      newStr += item;
     } else {
-      itemstr += `${item} | `;
+      newStr += `${item} | `;
     }
-    // eslint-disable-next-line no-plusplus
-    i++;
   }
-  return itemstr;
+  return newStr;
 }
