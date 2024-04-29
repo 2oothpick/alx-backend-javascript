@@ -1,8 +1,7 @@
 /**
-*Module contains the function
-*displayMessage that prints
-* @param {String} msg The message to display.
-* @author kobbyboateng <https://github.com/2oothpick>
+* Module contains the function
+* displayMessage that prints
+* to STDOUT
 */
 
 const displayMessage = (msg) => {
