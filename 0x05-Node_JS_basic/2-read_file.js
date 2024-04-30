@@ -10,11 +10,11 @@ function countStudents(path) {
       const rows = data.split('\n');
       // removing the first row
       rows.splice(0, 1);
-      const lastRow = rows[rows.length - 1];
-      if (lastRow === '') {
+      let lastRow = rows[rows.length - 1];
+      while (lastRow === '' || lastRow === '\r') {
         rows.pop();
+        lastRow = rows[rows.length - 1];
       }
-      // rows.pop()
       console.log(`Number of students: ${rows.length}`);
       for (let row of rows) {
         row = row.trim().split(',');
