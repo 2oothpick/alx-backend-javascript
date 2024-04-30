@@ -1,5 +1,3 @@
-// path-to-file as arg
-// throws an error if file is not available
 const fs = require('fs');
 
 function countStudents(path) {
@@ -12,6 +10,11 @@ function countStudents(path) {
       const rows = data.split('\n');
       // removing the first row
       rows.splice(0, 1);
+      const lastRow = rows[rows.length - 1];
+      if (lastRow === '') {
+        rows.pop();
+      }
+      // rows.pop()
       console.log(`Number of students: ${rows.length}`);
       for (let row of rows) {
         row = row.trim().split(',');
