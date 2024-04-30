@@ -1,4 +1,4 @@
-console.log('Welcome to Holberton School, What is your name?');
+process.stdout.write('Welcome to Holberton School, What is your name?');
 // take input from stdin
 const { stdin } = process;
 stdin.on('data', (name) => {
