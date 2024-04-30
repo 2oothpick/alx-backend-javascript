@@ -28,7 +28,7 @@ function countStudents(path) {
             stat[`list of ${sub}`].push(item[0]);
           }
         }
-      } console.log(fieldsArray)
+      }
       for (const item of fieldsArray) {
         console.log(`Number of students in ${item}: ${stat[`list of ${item}`].length}. List: ${stat[`list of ${item}`].join(', ')}`);
       }
