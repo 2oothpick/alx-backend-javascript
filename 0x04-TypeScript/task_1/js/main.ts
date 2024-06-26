@@ -9,3 +9,7 @@ interface Teacher {
     [key: string]: any
 }
 
+/* task 2 */
+interface Directors extends Teacher {
+    numberOfReports: number
+}
