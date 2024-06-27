@@ -37,8 +37,23 @@ class Teacher implements TeacherInterface {
 
 }
 
+type dirTeach = Director | Teacher
+
 function createEmployee(salary: number | string): Teacher | Director {
     if (Number(salary) < 500) {
         return new Teacher()
     } return new Director()
+}
+
+// type predicates
+function isDirector(employee: dirTeach): employee is Director{
+    return (employee instanceof Director)
+}
+
+function executeWork(employee: dirTeach){
+    if(isDirector(employee)){
+        return employee.workDirectorTasks()
+    } else {
+        return employee.workTeacherTasks()
+    }
 }
